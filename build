@@ -1,0 +1,7 @@
+#!/bin/bash
+
+NAME=ikiwiki-gen
+
+docker build --rm=true --tag $NAME .
+docker tag $NAME "localhost:5000/core/${NAME}"
+docker push "localhost:5000/core/${NAME}"
