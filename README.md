@@ -1,8 +1,18 @@
+## Summary
+
+This container takes as input a Git repository, clones it, and runs it
+through ikiwiki putting the resulting static HTML site in the
+directory `/ikiwiki`.
+
+For more information on ikiwiki see the [ikiwiki home
+page](https://ikiwiki.info/).
+
 ## How this container works:
 
 There are two parameters:
 
-   1. `GITURL`:  Git URL pointing to a git repository with the Markdown source. 
+   1. `GITURL`: an enviroment variable passed into the container that
+   is a Git URL pointing to a git repository with the Markdown source.
 
    2. an output directory where the rendered ikiwiki pages will be placed.
 
@@ -12,7 +22,14 @@ where you want the output to appear.
 
 ## Credentials
 
-Later.
+If your `GIT_URL` requires requires credentials in order to clone and
+uses https you can supply the username and password in the URL itself:
+
+    https://USERNAME:PASSWORD@github.com/macrotex/testing.git
+
+For example:
+
+    https://joeuser:sekret@github.com/macrotex/testing.git
 
 ## Example
 
@@ -23,7 +40,7 @@ To generate the ikiwiki output contained in the Git repository
     docker run \
       -e GIT_URL='https://github.com/macrotex/testing.git'
       -v /tmp/ikiwiki:/ikiwiki \
-      ikiwiki-gen
+      ikiwiki-build
 
     docker run -e GIT_URL='https://github.com/macrotex/testing.git' -v /tmp/ikiwiki:/ikiwiki ikiwiki-gen 
 
