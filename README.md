@@ -4,6 +4,10 @@ This container takes as input a Git repository, clones it, and runs it
 through ikiwiki putting the resulting static HTML site in the
 directory `/ikiwiki`.
 
+This container does *not* do any serving of the content, rather, it
+only creates the static (HTML, CSS, etc) pages that could then be
+served by a web server.
+
 For more information on ikiwiki see the [ikiwiki home
 page](https://ikiwiki.info/).
 
