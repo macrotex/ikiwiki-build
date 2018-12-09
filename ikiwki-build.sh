@@ -49,6 +49,7 @@ if [[ -z ${SYNC_S3+x } ]]; then
 else
     progress "About to sync ikiwiki site to S3 ..."
     # DO THE SYNC
+    aws s3 cp $IKIWIKI_OUTPUT_DIR $SYNC_S3 --recursive
     progress " finished syncing ikiwiki site to S3.\n"
 fi
 
