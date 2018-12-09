@@ -10,7 +10,7 @@ For more information on ikiwiki see the [ikiwiki home page](https://ikiwiki.info
 
 There are two parameters:
 
-   1. `GITURL`: an enviroment variable passed into the container that
+   1. `GIT_URL`: an enviroment variable passed into the container that
    is a Git URL pointing to a git repository with the Markdown source.
 
    2. an output directory where the rendered ikiwiki pages will be placed.
