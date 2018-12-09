@@ -10,4 +10,4 @@ WORKDIR /home/ikiwiki
 ADD ikiwki-build.sh /root/ikiwiki-build.sh
 
 # Run it.
-CMD ["/root/ikiwiki-gen.sh"]
+CMD ["/root/ikiwiki-build.sh"]
