@@ -4,7 +4,7 @@ set -e
 
 ## ## #### ## #### ## #### ## ##
 function progress() {
-  if [[ -z ${VERSBOSE+x} ]]; then
+  if [[ -z ${VERBOSE+x} ]]; then
     printf "$1"
   fi
 }
@@ -40,7 +40,7 @@ fi
 progress "Will put ikiwiki output in ${IKIWIKI_OUTPUT_DIR}.\n"
 
 progress "Starting to convert the site to ikiwiki ..."
-ikiwiki $GIT_WORK_DIR $IKIWIKI_OUTPUT_DIR
+ikiwiki --plugin toc $GIT_WORK_DIR $IKIWIKI_OUTPUT_DIR
 progress " finished converting the site to ikiwiki.\n"
 
 # Step 3. If the SYNC_S3 variable is set we do the syncing now

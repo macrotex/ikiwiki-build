@@ -37,5 +37,6 @@ To generate the ikiwiki output contained in the Git repository `https://github.c
       -v /tmp/ikiwiki:/ikiwiki \
       ikiwiki-build
 
+    # Same as above command but in one long line:
     docker run -e GIT_URL='https://github.com/macrotex/testing.git' -v /tmp/ikiwiki:/ikiwiki ikiwiki-gen 
 
