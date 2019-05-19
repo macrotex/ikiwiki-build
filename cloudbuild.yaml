@@ -1,0 +1,8 @@
+steps:
+# Generate the HTML from the markdown code
+- name: 'macrotex/ikiwiki-build'
+  env:
+  - 'GIT_URL=https://github.com/macrotex/ikiwiki'
+  volumes:
+  - name: 'vol1'
+    path: '/ikiwiki'
